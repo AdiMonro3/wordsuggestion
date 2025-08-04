@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkaline Water Bottle - Premium Hydration Solution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            background: #ff6b6b;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #ff5252;
+        }
+        
+        .hero-image {
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .specs-table th,
+        .specs-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .specs-table th {
+            background: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #667eea;
+            transform: scale(1.05);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 1rem 0;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">AlkalineBottle</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#specs">Specifications</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Premium Alkaline Water Bottle</h1>
+                <p>Transform any water into alkaline water instantly! Our innovative bottle features built-in alkaline filters that raise pH levels and add essential minerals for better hydration and health benefits.</p>
+                <button class="cta-button">Shop Now -500Rs</button>
+            </div>
+            <div class="hero-image">
+                <img src="img.png" alt="Alkaline Water Bottle" style="width: 300px; height: 300px; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <h2>Why Choose Our Alkaline Bottle?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💧</div>
+                <h3>Instant Alkaline Conversion</h3>
+                <p>Built-in alkaline filter instantly converts regular water to pH 8.5-9.5 alkaline water in seconds.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Mineral Enhancement</h3>
+                <p>Adds essential minerals like calcium, magnesium, and potassium for enhanced nutrition and taste.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔋</div>
+                <h3>Long-lasting Filter</h3>
+                <p>Advanced filter technology lasts up to 6 months or 500 refills, providing excellent value.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Antioxidant Properties</h3>
+                <p>Creates antioxidant-rich water that helps neutralize free radicals and supports cellular health.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3>Eco-Friendly Design</h3>
+                <p>Reusable bottle reduces plastic waste and carbon footprint compared to bottled alkaline water.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Smart Technology</h3>
+                <p>Leak-proof design with easy-grip handle and wide mouth for easy cleaning and refilling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="section" id="specs" style="background: #f8f9fa;">
+        <h2>Product Specifications</h2>
+        <table class="specs-table">
+            <tr>
+                <th>Specification</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Capacity</td>
+                <td>750ml (25.4 oz) - Perfect size for daily hydration</td>
+            </tr>
+            <tr>
+                <td>Material</td>
+                <td>BPA-free Tritan plastic with stainless steel filter</td>
+            </tr>
+            <tr>
+                <td>Dimensions</td>
+                <td>10" x 3" (25cm x 7.5cm) - Fits in most cup holders</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>12 oz (340g) when empty</td>
+            </tr>
+            <tr>
+                <td>pH Range</td>
+                <td>8.5 - 9.5 (adjustable based on source water)</td>
+            </tr>
+            <tr>
+                <td>Filter Life</td>
+                <td>6 months or 500 refills</td>
+            </tr>
+            <tr>
+                <td>Temperature Range</td>
+                <td>-20°C to 80°C (-4°F to 176°F)</td>
+            </tr>
+            <tr>
+                <td>Warranty</td>
+                <td>1 year comprehensive warranty</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <h2>Choose Your Package</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Single Bottle</h3>
+                <div class="price">500rs</div>
+                <ul style="list-style: none; padding: 0;">
+                    <li>✓ Alkaline Water Bottle</li>
+                    <li>✓ 6-Month Filter</li>
+                    <li>✓ Cleaning Brush</li>
+                    <li>✓ 1-Year Warranty</li>
+                </ul>
+                <button class="cta-button" style="margin-top: 1rem;">Buy Now</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Family Pack</h3>
+                <div class="price">1000rs</div>
+                <ul style="list-style: none; padding: 0;">
+                    <li>✓ 2 Alkaline Water Bottles</li>
+                    <li>✓ 2 Replacement Filters</li>
+                    <li>✓ Cleaning Kit</li>
+                    <li>✓ 2-Year Warranty</li>
+                    <li>✓ Free Shipping</li>
+                </ul>
+                <button class="cta-button" style="margin-top: 1rem;">Buy Now</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium Bundle</h3>
+                <div class="price">1500rs</div>
+                <ul style="list-style: none; padding: 0;">
+                    <li>✓ 3 Alkaline Water Bottles</li>
+                    <li>✓ 6 Replacement Filters</li>
+                    <li>✓ Premium Cleaning Kit</li>
+                    <li>✓ 3-Year Warranty</li>
+                    <li>✓ Priority Support</li>
+                </ul>
+                <button class="cta-button" style="margin-top: 1rem;">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section" id="reviews" style="background: #f8f9fa;">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <h4>Sarah Johnson</h4>
+                <p>"This alkaline bottle is amazing! I take it everywhere and love how it instantly makes any water alkaline. My energy levels have improved significantly!"</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <h4>Mike Chen</h4>
+                <p>"Perfect for the gym and office. The filter lasts a long time and the water tastes great. Much better than buying expensive bottled alkaline water."</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <h4>Emily Rodriguez</h4>
+                <p>"Easy to use and clean. The bottle is durable and the alkaline water really helps with my digestion. Highly recommend!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 AlkalineBottle. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </footer>
+</body>
+</html>
